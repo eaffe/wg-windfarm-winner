@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<rect width="512" height="512" rx="100" fill="#091e18"/>
+<circle cx="330" cy="151" r="116" fill="#1a443a"/>
+<path d="M90 356h330" stroke="#42765c" stroke-width="18" stroke-linecap="round"/>
+<path d="M256 135v253" stroke="#dcf9d7" stroke-width="19" stroke-linecap="round"/>
+<circle cx="256" cy="155" r="23" fill="#b7f78b"/>
+<path d="M256 154L212 54l32-19L275 147ZM257 155l114 22-5 38-117-37ZM256 156l-70 93-30-24 80-81Z" fill="#d8f5de"/>
+<text x="256" y="452" text-anchor="middle" fill="#b7f78b" font-size="72" font-weight="700" font-family="Arial, sans-serif">WG</text>
+<circle cx="347" cy="432" r="14" fill="#b7f78b"/>
+</svg>

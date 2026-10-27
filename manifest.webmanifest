@@ -1,0 +1,11 @@
+{
+  "name":"WG WindFarm Winner",
+  "short_name":"WindFarm Winner",
+  "description":"Wind infrastructure private equity strategy game",
+  "start_url":"./",
+  "scope":"./",
+  "display":"standalone",
+  "background_color":"#091c19",
+  "theme_color":"#091c19",
+  "icons":[{"src":"./assets/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
