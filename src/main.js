@@ -110,7 +110,7 @@ function render(){root.innerHTML=appShell();}
 function action(doIt){let result;try{result=doIt();}catch(ex){flash(ex.message||'Unexpected error',true);return;}if(result){notice=result.msg||'';error=result.ok?'':notice;}if(result?.ok){persist();}render();}
 root.addEventListener('click',async e=>{
   const t=e.target.closest('[data-tab],[data-filter],[data-account],[data-action]');if(!t||t.disabled||busy)return;
-  if(t.dataset.tab){tab=t.dataset.tab;notice='';error='';render();if(tab==='leaderboard'&&cloud.user)void fetchBoard();return;}
+  if(t.dataset.tab){tab=t.dataset.tab;notice='';error='';render();if(tab==='leaderboard')void fetchBoard(true);return;}
   if(t.dataset.filter){filter=t.dataset.filter;render();return;}
   if(t.dataset.account){accountPane=t.dataset.account;render();return;}
   const a=t.dataset.action,id=t.dataset.id;

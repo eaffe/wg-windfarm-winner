@@ -93,7 +93,10 @@ language sql stable security definer set search_path='' as $$
     order by r.user_id,r.score desc,r.updated_at desc
   ) best order by best.lp_irr desc,best.multiple desc limit 50;
 $$;
-revoke all on function public.wfw_leaderboard() from public,anon;
-grant execute on function public.wfw_leaderboard() to authenticated;
+-- Intentional guest-visible, read-only ranking: only opted-in nicknames and
+-- completed fund scores are returned by the tightly scoped SECURITY DEFINER RPC.
+-- Private profiles and fund snapshots remain protected by RLS.
+revoke all on function public.wfw_leaderboard() from public;
+grant execute on function public.wfw_leaderboard() to anon, authenticated;
 -- Admin-maintained score verification can replace browser scoring before
 -- running a prize-linked or high-stakes competition.
